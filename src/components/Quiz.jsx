@@ -23,7 +23,7 @@ export default function Quiz() {
 
 
 
-  // listen array correct ,incorreact array option 
+  // listen array correct ,incorrect array = option 
   useEffect(() => {
     if (list.length > 0) {
       const modifiedListen = list.map(item => {
@@ -40,7 +40,7 @@ export default function Quiz() {
       setListen(modifiedListen);
     }
   }, [list]);
-  console.log(listen)
+
 
   return (
     <div className='quiz-container'>
