@@ -1,0 +1,108 @@
+@use 'variables';
+
+
+
+.quizcard-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 60%;
+    color: variables.$text-color_1;
+    text-align: center;
+    position: relative;
+
+    .quizcardshow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .showRestart {
+            margin: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 20px;
+            background-color: variables.$button-color;
+            color: variables.$color_input-button;
+            border: none;
+            border-radius: 8px;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: variables.$color_input-button;
+                box-shadow: 0 0 0 5px variables-$color_input-button;
+                color: variables.$text-color_1;
+            }
+        }
+    }
+
+    .quizcard {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+
+        .quizquestion {
+            margin-bottom: 20px;
+
+            p {
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+
+
+        .quizcard-answer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+
+            p {
+                min-width: 250px;
+                padding: 10px;
+            }
+
+
+            .answers {
+                border: 1px solid rgb(133, 133, 133);
+                cursor: pointer;
+                border-radius: 20px;
+
+
+            }
+
+            .correct {
+                background-color: variables.$correct-color;
+                color: variables.$text-color_1;
+            }
+
+            .incorrect {
+                background-color: variables.$incorrect-color;
+                color: variables.$text-color_1;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .quizcard-show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quizcard-answer {
+        display: flex;
+        flex-direction: column;
+    }
+}

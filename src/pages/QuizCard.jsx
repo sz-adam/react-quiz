@@ -59,7 +59,7 @@ const handleNextQuestion = () => {
           </button>
         </div>
       ) : (
-        <div className="quizcard-show">
+        <div className="quizcard">
           {listen[currentIndex] && (
             <div className="quizcard">
               <div className="quizquestion">
