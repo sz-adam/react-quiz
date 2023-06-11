@@ -1,8 +1,18 @@
+.home-container .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-container .container .home-buttton, .home-container .container input::placeholder, .home-container .container input {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .home-container {
   background-color: #0f3446;
   width: 100%;
   height: 100vh;
-  position: relative;
 }
 .home-container h1 {
   text-align: center;
@@ -11,10 +21,7 @@
 }
 .home-container .container {
   width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 80vh;
   align-items: center;
 }
 .home-container .container input {
@@ -24,19 +31,14 @@
   background-color: #0f3446;
   border-bottom: 2px solid black;
   color: #f3f7fe;
-  font-size: 20px;
 }
 .home-container .container input::placeholder {
   color: #3b82f6;
-  font-weight: bold;
-  font-size: 1rem;
 }
 .home-container .container input:focus::placeholder {
   opacity: 0;
 }
 .home-container .container .home-buttton {
-  font-weight: 700;
-  font-size: 20px;
   background-color: #f3f7fe;
   color: #3b82f6;
   border: none;

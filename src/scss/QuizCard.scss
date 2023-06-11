@@ -1,40 +1,36 @@
 @use 'variables';
-
+@import '../scss/templates';
+@import '../scss/mixins';
 
 
 .quizcard-container {
     display: flex;
     justify-content: center;
-    width: 80%;
-    height: 60%;
+    @include wh($widht: 80%, $height: 60%);
+   
     color: variables.$text-color_1;
     text-align: center;
     position: relative;
 
     .quizcardshow {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @extend %flex-colum-justCenter;
         align-items: center;
         text-align: center;
 
         p {
-            font-size: 20px;
+            @extend %font-size-bold;
             padding: 10px;
         }
 
         .showRestart {
             margin: 1.5rem;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 20px;
+            padding: 0.5rem 1.5rem;        
+            @extend %font-size-bold;
             background-color: variables.$button-color;
             color: variables.$color_input-button;
-            border: none;
-            border-radius: 8px;
             transition: .3s;
             cursor: pointer;
+            border: none;
 
             &:hover {
                 background-color: variables.$color_input-button;
@@ -45,9 +41,8 @@
     }
 
     .quizcard {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        @extend %flex-colum;
+        @include wh($widht: 100%);          	
         justify-content: space-around;
         align-items: center;
         text-align: center;
@@ -57,8 +52,9 @@
             margin-bottom: 20px;
 
             p {
-                font-size: 20px;
+                @extend %font-size-bold;
                 padding: 10px;
+                letter-spacing: 4px;
             }
         }
 
@@ -67,10 +63,12 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
+           
 
             p {
                 min-width: 250px;
-                padding: 10px;
+                padding: 15px;
+                letter-spacing: 3px;
             }
 
 
@@ -96,13 +94,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .quizcard-show {
-        display: flex;
-        flex-direction: column;
+   
+ 
+    .quizcard-answer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr)  !important
     }
-
-    .quizcard-answer {
-        display: flex;
-        flex-direction: column;
-    }
-}
+  }

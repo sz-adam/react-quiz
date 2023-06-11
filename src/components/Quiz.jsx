@@ -45,7 +45,7 @@ export default function Quiz() {
   return (
     <div className='quiz-container'>
       {loading ?( <Loading />):(<>
-      <h1>Welcome to the Quiz,{nickName} !</h1>
+      <h1>Welcome to the Quiz, {nickName} !</h1>
       <div className="quiz">
         <QuizCard listen={listen} />
       </div>
